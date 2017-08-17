@@ -1,8 +1,7 @@
 let db = require("./db");
 
 let scheme = db.Schema({
-    "userId": { type: Number, required: true },
-    "id": { type: Number, required: true },
+    "userId": { type: String, required: true },
     "title": { type: String, required: true },
     "body": { type: String, required: true }
 });

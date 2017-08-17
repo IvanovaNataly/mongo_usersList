@@ -5,7 +5,8 @@ let app = express();
 app.use(bodyParser.json());
 
 let User = require("./UserModel");
-let allPosts = require("./postsList");
+let Post = require("./PostModel");
+//let allPosts = require("./postsList");
 
 let router = express.Router();
 
@@ -42,8 +43,23 @@ router.route("/users/:id")
 router.route("/users/:id/posts")
     .get((req, res) => {
         let {id} = req.params;
-        let posts = allPosts.filter(post => post.userId == id);
-        res.json(posts);
+        Post.find({userId: id}, function(err, posts){
+            if(!err)
+                res.json(posts);
+            else
+                res.status(500).send(err);
+        })
+    });
+
+router.route("/posts")
+    .post((req, res) => {
+        var post = new Post(req.body);
+        post.save(function(err, post){
+            if(!err)
+                res.json(post);
+            else
+                res.status(500).send(err);
+        })
     });
 
 // router.route("/users/:id")
