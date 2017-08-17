@@ -1,0 +1,31 @@
+@import "./colors.scss";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #767c8b linear-gradient(to bottom, #a9bbed, #767c8b) no-repeat;
+    font-family: "Open Sans";
+    font-weight: 300;
+    height: 100%;
+}
+
+body {
+
+
+
+    ul, li {
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+
+
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+
+

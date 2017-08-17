@@ -1,0 +1,19 @@
+@import "../../colors";
+
+.navigation {
+    background: $navBackground;
+    color: $fontColor;
+    padding: 10px 20px;
+
+    a {
+        color: $fontColor;
+        margin: 20px;
+        border: 0;
+        text-decoration: none;
+        padding: 5px 10px;
+
+        &.active {
+            border: 1px solid $fontColor;
+        }
+    }
+}

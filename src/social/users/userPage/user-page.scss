@@ -1,0 +1,25 @@
+@import "../../../colors";
+
+.user-page {
+    background: $mainBackground;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 230px;
+
+    .cover {
+        height: 200px;
+        margin: -20px;
+        margin-bottom: 0;
+        background-size: cover;
+        background-position: 50%;
+    }
+
+
+    dt {
+        font-weight: 500;
+    }
+
+    h1, h2, h3 {
+        margin: 10px 0;
+    }
+}
